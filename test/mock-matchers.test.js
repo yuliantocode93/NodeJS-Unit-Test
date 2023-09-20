@@ -1,3 +1,4 @@
+import {calculate} from "../src/sum"
 test ("test mock matchers", () => {
     const callback = jest.fn();
 

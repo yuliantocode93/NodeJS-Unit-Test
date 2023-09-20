@@ -15,7 +15,7 @@ export const calculate = (numbers, callback) => {
   for (let number of numbers) {
     total += number;
   }
-  callback(total);
+ callback(total);
 };
 
 

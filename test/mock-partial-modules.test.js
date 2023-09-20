@@ -1,3 +1,5 @@
+import { getAllProducts } from "../src/database";
+import { productService } from "../src/product-service";
 
 jest.mock("../src/database.js", () => {
     const originalModule = jest.requireActual("../src/database.js");
@@ -5,11 +7,12 @@ jest.mock("../src/database.js", () => {
     return {
         __esModule: true,
         ...originalModule,
-        getProductById: jest.fn()
+        getAllProducts: jest.fn(),
+        // getProductById: jest.fn()
     }
 });
 
-test.failing("mkock modules getProductById", () => {
+test.failing("mock modules getProductById", () => {
   getProductById.mockImplementation((id) => {
     return {
       id: id,

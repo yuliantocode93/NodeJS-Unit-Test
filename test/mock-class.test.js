@@ -1,3 +1,4 @@
+import { UserRepository } from "../src/user-repository.js";
 import {UserService} from "../src/user-service.js";
 
 
@@ -9,7 +10,7 @@ const service = new UserService(repository);
 test ("test mock user save", () => {
 
     const user = {
-        id:1,
+        id: 1,
         name: "yuli"
     };
 

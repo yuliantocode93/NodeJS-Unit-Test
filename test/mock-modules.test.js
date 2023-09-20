@@ -3,7 +3,7 @@ import { productService } from "../src/product-service";
 
 jest.mock("../src/database.js");
 
-test ("mkock modules getProductById", () => {
+test ("mock modules getProductById", () => {
     getProductById.mockImplementation((id) => {
         return {
             id: id,
@@ -29,6 +29,7 @@ test("mock modules getAllProducts", () => {
         name: "Product Mock",
       },
     ];
+    
     getAllProducts.mockImplementation(() => {
         return products;
     });
