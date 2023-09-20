@@ -8,12 +8,17 @@
     "test": "jest"
   },
   "jest": {
-    "maxConcurrency": 1,
-    "verbose": false,
+    "maxConcurrency": 5,
+    "verbose": true,
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
     },
-    "collectCoverage": true,
+    "collectCoverage": false,
+    "collectCoverageFrom" : [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+    "!**/vendor/**"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 100,

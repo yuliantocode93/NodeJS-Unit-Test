@@ -19,6 +19,6 @@ const table = [
   },
 ];
 
-test.each(table)("test sumAll(%s) should result %i", ({numbers, expected}) => {
+test.each(table)("test sumAll($numbers) should result $expected", ({numbers, expected}) => {
   expect(sumAll(numbers)).toBe(expected);
 });
